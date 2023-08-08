@@ -1,0 +1,31 @@
+.container{
+  text-align: center;
+  background-color: #303030;
+  color: white;
+
+}
+mat-label{
+  color: white;
+}
+
+table{
+  background-color: #FF7C48;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.mat-paginator{
+  color: white;
+  background-color: #4e4d4d;
+}
+
+.mat-header-cell{
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mat-cell{
+  min-width: 100%;
+}

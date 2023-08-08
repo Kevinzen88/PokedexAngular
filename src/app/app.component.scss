@@ -1,0 +1,84 @@
+@use "./../assets/styles/var.scss";
+
+html{
+  background-color: #000000;
+}
+a{
+  text-decoration: none;
+  color: #cbcbcb;
+}
+header{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  padding: 0 20px;
+    background-image: url("../assets/img/Barra_superior.png");
+    background-size: cover;
+
+    a{
+      color: var.$texto-blanco;
+      text-decoration: none;
+      background-color: rgb(255, 255, 255);
+      border-color: 5px solid #000000;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 30px;
+      border-radius: 50px;
+      font-size: 20px;
+    }
+  }
+
+#tituloContent
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  background-color: none;
+  border: solid 3px none;
+  width: 300px;
+  color: var.$texto-black;
+
+  border-radius: 50px;
+  height: 50px;
+
+  img{
+    height: 40px;
+  }
+
+  h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3.5rem;
+    -webkit-text-stroke: 1.5px #cbcbcb;
+  }
+
+}
+
+footer{
+  background-color: #000000;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var.$texto-blanco;
+  input{
+    color: var.$texto-blanco;
+    text-decoration: none;
+  }
+  p{
+    margin: 0 20px;
+  }
+  kbd{
+    display: inline-block;
+    background-color: #6e6b67;
+    border-radius: 50%;
+    width: 26px;
+    line-height: 26px;
+    text-align: center;
+    aspect-ratio: 1;
+    font-size: xx-large;
+    margin:  0 5px;
+  }
+}

@@ -1,0 +1,46 @@
+#container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  &.seleccionado::before{
+    position: absolute;
+    content: "";
+    width: calc(100% + 8px);
+    height: 50px;
+    left: 0px;
+    background-image: url("../../../assets/img/Barra_seleccion.png");
+    background-size: cover;
+    z-index: -1;
+    border-radius: 15px;
+  }
+}
+
+#tarjeta{
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 142, 0);
+  border-radius:  25px 5px 5px 25px;
+  padding-left: 5px;
+  gap: 1rem;
+  width: 90%;
+  font-size: larger;
+  &.seleccionado{
+    background-color: white;
+  }
+
+}
+
+#circulo{
+  border-radius: 50%;
+  height: 35px;
+  border: 2px solid #0f0f0ff8;
+  aspect-ratio: 1;
+  background-color: rgba(0, 0, 0, 0.525);
+
+}
+
+img{
+
+  max-height: 40px;
+}

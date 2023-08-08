@@ -1,0 +1,108 @@
+#container{
+  height: calc(100vh - 140px);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+
+  background-image: url("../../../assets/img/fondo_imagen_2.png");
+  background-repeat: no-repeat;
+  background-attachment:inherit;
+  background-size: cover;
+
+  ::-webkit-scrollbar{
+    width: 26px;
+
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #302c2b;
+    border-radius: 2px;
+    /* Con este truco hago el thumb más chico que su padre */
+    box-shadow: inset 0 0 0 2px #332f2e;
+     border-left: 1.5px solid transparent;
+     border-right: 1.5px solid transparent;
+     background-clip: padding-box;
+    cursor:grab;
+  }
+  ::-webkit-scrollbar-track {
+    border: solid #fbfbfb 2px;
+    cursor: pointer;
+    background: repeating-linear-gradient(
+      0deg,
+      #ffffff,
+      #ffffff 5px,
+      #ffffff 7px,
+      #ffffff 9px
+    );
+  }
+}
+
+app-modal-detalle{
+  position: absolute;
+  z-index: 1;
+  left: -60vw;
+  transition-timing-function: ease-in-out;
+  transition: 0.5s;
+  &.abierto{
+    left: 0;
+  }
+}
+
+
+app-modal-table{
+  background-color: #fbfbfb;
+  position:absolute;
+  z-index: 1;
+  width: 300px;
+  bottom: 20.2vh;
+  left: 79vw;
+  transition-timing-function: ease-in-out;
+  transition: 0.5s;
+  &.abierto{
+    left: 0;
+  }
+}
+
+app-img-pokemon{
+  margin-left: 100px;
+  transition-timing-function: ease-in-out;
+  transition: 0.5s;
+  z-index: 2;
+  &.abierto{
+    margin-left: 50px;
+  }
+}
+
+#cardContainer{
+  position:relative;
+  transition-timing-function: ease-in-out;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-right: 0;
+
+
+
+}
+.button{
+  transition: 0.5s ease-in-out;
+  background-color:#302c2b;
+  color: white;
+  font-size: 20px;
+  background-size: cover;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  top: 3%;
+  right: 6%;
+  position: absolute;
+}
+.button:hover{
+  background-color: #fbfbfb;
+  color: #302c2b;
+}
+
+

@@ -1,0 +1,27 @@
+<main id="container">
+  <button type="button" class="button" data-toggle="modal">
+    Busqueda de Pokemon
+  </button>
+ <app-modal-detalle
+ [pokemon]="pokemonSelected"
+ (cambioAbierto)="cambiarEstadoDetalles()"
+ [abierto]="detalle"
+ [ngClass]="{abierto: detalle}"
+ ></app-modal-detalle>
+ <app-modal-table
+ ></app-modal-table>
+ <app-img-pokemon
+  [pokemon]="pokemonSelected"
+  [ngClass]="{abierto: detalle}"
+ ></app-img-pokemon>
+ <div id="cardContainer" #targetas (scroll)="onScroll($event)">
+  <app-card-pokemon *ngFor="let pokeapi of listPokes"
+  [data]="pokeapi"
+  [seleccionado]="pokeapi.name === pokemonSelected?.name"
+  (clickeado)="cardClick($event)"
+  [ngClass]="{abierto: detalle}"
+  ></app-card-pokemon>
+  <img src="https://loading.io/asset/666119" alt="Cargando" id="spinner" *ngIf="carga">
+</div>
+</main>
+

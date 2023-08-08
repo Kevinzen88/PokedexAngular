@@ -1,0 +1,135 @@
+#container{
+  display: grid;
+  grid-template-columns: 1fr 60px;
+}
+#datos{
+  height: 600px;
+  width: 60vw;
+  //background-color: rgb(255, 195, 75);
+  display: grid;
+  grid-template-rows: 1fr 3fr 3fr;
+
+  .area:first-child{
+    flex-grow: 1;
+    //background-image: url("../../../assets/img/Barra_superior_targeta.png");
+    background-size: cover;
+  }
+  .area{
+    //color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    //background-color: white;
+    padding-left: 66%;
+    padding-right: 10px;
+    font-size: large;
+    p{
+      margin:10px 10px;
+    }
+  }
+  .area:last-child{
+    //background: repeating-linear-gradient(
+    //  #cce586,
+    //  #cce586 2px,
+    //  #bfd678 2px,
+    //  #bfd678 4px,
+    //);
+    p{
+      margin:20px 10px;
+
+    }
+
+  }
+}
+
+#descripcionContainer{
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 70%;
+  display: grid;
+  grid-template-columns:20px 1fr 20px;
+  -webkit-box-shadow: 6px 7px 15px -6px rgba(0,0,0,0.48);
+    -moz-box-shadow: 6px 7px 15px -6px rgba(0,0,0,0.48);
+    box-shadow: 6px 7px 15px -6px rgba(0,0,0,0.48);
+
+  div{
+    background-color: #ff4444;
+    margin-top: 10px;
+    height: 90%;
+    margin: 5px;
+    &:first-child{
+      border-radius: 0 8px 8px 0;
+    }
+    &:last-child{
+      border-radius: 8px 0 0 8px;
+    }
+  }
+}
+.tipo{
+  background-color: rgb(48, 48, 48);
+  border-radius: 5px;
+  color: white;
+  padding: 5px 20px;
+  margin-left: 5px;
+}
+button{
+  position: relative;
+  align-items: center;
+  margin-top: 85px;
+  height: 80%;
+  background-color: #fd4a4a;
+  border-radius: 0 25px 25px 0;
+  border: 3px solid #123705;
+  cursor: pointer;
+  img{
+    transition-timing-function: ease-in-out;
+    height: 50px;
+    transition: 0.5s;
+    &.girar{
+      rotate: 180deg;
+    }
+    &.hover{
+      scale: 1.1;
+    }
+  }
+}
+.etiqueta{
+  display: inline-block;
+  margin-right: 20px;
+  background-color: rgb(121, 181, 255);
+  border-radius: 5px;
+  color: white;
+  padding: 5px 20px;
+  font-size: x-large;
+  width: 100px;
+  text-align: center;
+}
+
+#backdrop{
+  position: fixed;
+  top: 9.5%;
+  left: 0.5%;
+  height: 76.5vh;
+  width: 79.5vw;
+  background-image: url("../../../assets/img/pokedex_sinfondo.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-attachment:inherit;
+  //background-color: rgba(0, 0, 0, 0.645);
+  z-index: -1;
+  opacity: 1;
+  &.escondido{
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+app-card-pokemon{
+  z-index: 2;
+  position: absolute;
+  background-size:cover;
+  top:8%;
+  right: 55%;
+  width: 40%;
+}
